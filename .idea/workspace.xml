@@ -5,19 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a2a6b1c-23dc-4455-8dbc-0a316d9dce18" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BubbleSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/InsertionSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MergeSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/QuickSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SelectionSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ShellSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SortingAlgorithms.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BubbleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InsertionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SelectionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ShellSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShellSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SortingAlgorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortingAlgorithms.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -46,6 +43,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.BubbleSort.executor": "Run",
+    "Application.InsertionSort.executor": "Run",
+    "Application.MergeSort.executor": "Run",
+    "Application.QuickSort.executor": "Run",
+    "Application.SelectionSort.executor": "Run",
+    "Application.ShellSort.executor": "Run",
     "Application.SortingAlgorithms.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
