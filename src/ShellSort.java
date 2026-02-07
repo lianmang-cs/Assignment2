@@ -12,7 +12,6 @@ public class ShellSort{
                 array[j-gap] = temp;
                 j -= gap;
             }
-
         }
     }
     public void ShellSort(int[] array, int[] gap_array) {

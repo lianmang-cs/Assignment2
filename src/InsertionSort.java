@@ -1,7 +1,6 @@
-//Done
-import java.util.Arrays;
-public class InsertionSort {
-    public void InsertionSort(int[] array) {
+
+public class InsertionSort implements SortingAlgorithms {
+    public int[] sorty(int[] array) {
         int size = array.length;
         for(int i = 1; i < size;i++) {
             int j = i;
@@ -13,5 +12,6 @@ public class InsertionSort {
                 j--;
             }
         }
+        return array;
     }
 }

@@ -1,58 +1,54 @@
-import java.util.Arrays;
-public class MergeSort {
-    public static void merge(int[] array, int leftFirst, int leftLast, int rightLast) {
-        int mergeSize = rightLast - leftFirst + 1;
-        int[] mergeNumbers = new int[mergeSize];
-        int mergePos = 0;
-        int leftPos = leftFirst;
-        int rightPos = leftLast + 1;
+public class MergeSort implements SortingAlgorithms {
+    public int[] sorty(int[] array) {
+        if(array.length <= 1) {
+            return array;
+        }
+        int middle = array.length/2;
+        int[] leftArr = new int[middle];
+        int[] rightArr = new int[array.length-middle];
+        int j = 0;
 
-        while(leftPos <= leftLast && rightPos <= rightLast) {
-            if (array[leftPos] <= array[rightPos]) {
-                mergeNumbers[mergePos] = array[leftPos];
-                leftPos++;
+        for(int i = 0; i < array.length; i++) {
+            if(i < middle) {
+                leftArr[i] = array[i];
             }
             else {
-                mergeNumbers[mergePos] = array[rightPos];
+                rightArr[j] = array[i];
+                j++;
+            }
+        }
+        leftArr =  sorty(leftArr);
+        rightArr = sorty(rightArr);
+        return merge(array, leftArr, rightArr);
+    }
+    public static int[] merge(int[] array, int[] leftArr, int[] rightArr) {
+        int leftSize = array.length / 2;
+        int rightSize = array.length - leftSize;
+        int leftPos = 0;
+        int rightPos = 0;
+        int i = 0;
+        while (leftPos < leftSize && rightPos < rightSize) {
+            if (leftArr[leftPos] < rightArr[rightPos]) {
+                array[i] = leftArr[leftPos];
+                i++;
+                leftPos++;
+            } else {
+                array[i] = rightArr[rightPos];
+                i++;
                 rightPos++;
             }
-            mergePos++;
         }
-
-        while(leftPos <= leftLast) {
-            mergeNumbers[mergePos] = array[leftPos];
+        while (leftPos < leftSize) {
+            array[i] = leftArr[leftPos];
+            i++;
             leftPos++;
-            mergePos++;
         }
 
-        while(rightPos <= rightLast) {
-            mergeNumbers[mergePos] = array[rightPos];
+        while (rightPos < rightSize) {
+            array[i] = rightArr[rightPos];
+            i++;
             rightPos++;
-            mergePos++;
         }
-        //Copy merged numbers back into the array
-        for(mergePos = 0; mergePos < mergeSize; mergePos++) {
-            array[leftFirst + mergePos] = mergeNumbers[mergePos];
-        }
-
-    }
-    public void mergeSort(int[] array, int startIdx, int endIdx) {
-        if(startIdx < endIdx) {
-            int mid = (startIdx + endIdx) / 2;
-
-            mergeSort(array, startIdx, mid);
-            mergeSort(array, mid + 1, endIdx);
-            //merge left and right partitions
-            merge(array, startIdx, mid, endIdx);
-        }
-    }
-
-    public static void main(String[] args) {
-        MergeSort sort = new MergeSort();
-        int[] A = {3, 12, 0, 34, 5, 23, 18, 9};
-        int startIdx = 0;
-        int endIdx = 7;
-        sort.mergeSort(A, startIdx, endIdx);
-        System.out.println(Arrays.toString(A));
+        return array;
     }
 }

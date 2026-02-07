@@ -1,7 +1,5 @@
-//Done
-import java.util.Arrays;
-public class BubbleSort {
-    public void bubbleSort(int[] array) {
+public class BubbleSort implements SortingAlgorithms{
+    public int[] sorty(int[] array) {
         int size = array.length;
         for(int i = 0; i < size -1; i++) {
             for(int j = 0; j < size -1; j++) {
@@ -13,13 +11,6 @@ public class BubbleSort {
                 }
             }
         }
-    }
-    public static void main(String[] args) {
-        BubbleSort sort = new BubbleSort();
-        int[] A = {3, 12, 0, 34, 5, 23, 18, 9};
-        //BubbleSort
-        sort.bubbleSort(A);
-        System.out.println("Bubble Sorted: ");
-        System.out.println(Arrays.toString(A));
+        return array;
     }
 }

@@ -1,7 +1,4 @@
-//Done (Recheck)
-import java.util.Arrays;
 public class QuickSort {
-
     public int partition(int[] array, int lowIdx, int highIdx) {
         int midpoint = lowIdx + (highIdx - lowIdx) / 2;
         int pivot = array[midpoint];
@@ -26,16 +23,13 @@ public class QuickSort {
         }
         return highIdx;
     }
-    public void QuickSort(int[] array, int startIdx, int endIdx) {
+    public void quickSort(int[] array, int startIdx, int endIdx) {
         if(endIdx <= startIdx) {
             return;
         }
         int high = partition(array, startIdx, endIdx);
 
-        QuickSort(array, startIdx, high);
-        QuickSort(array, high + 1, endIdx);
-
+        quickSort(array, startIdx, high);
+        quickSort(array, high + 1, endIdx);
     }
-
-
 }
